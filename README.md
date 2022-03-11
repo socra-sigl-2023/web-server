@@ -90,8 +90,14 @@ Make sure your HTML displays correctly on your browser (simply open your html fi
 
 Deploy your index.html file by replacing default's NGINX html file on your remote server:
 ```sh
-# from your local host
-$ scp -i <path_to_your_ssh_key> <path_to_your_index.html> sigl@groupXX.socra-sigl.fr:/usr/share/nginx/html/index.html
+# from your local host; make sure it ends with ':'
+$ scp -i <path_to_your_ssh_key> <path_to_your_index.html> sigl@groupXX.socra-sigl.fr:
+```
+Connect with ssh to your remote server, and move your `index.html` to default nginx html's folder:
+```sh
+# see previous step how to connect with ssh to your machine
+# Once connected, from your remote server:
+$ sudo cp /home/sigl/index.html /var/www/html/index.nginx-debian.html 
 ```
 - You should be all set! 
 - Visits your group's address and you should see your group's participants
