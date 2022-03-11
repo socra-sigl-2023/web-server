@@ -43,6 +43,9 @@ $ ssh -i <path_to_your_ssh_key> sigl@groupXX.socra-sigl.fr
 # Accept the prompt message (only happens on first SSH connection)
 # You should be connected remotely
 ```
+> Note: make sure your rights on your private SSH key are not too open
+> type `$ chmod 400 <path_to_your_ssh_key>` to make sure you have correct rights
+
 - Add an `AUTHORS.txt` in sigl's user home with your logins:
 ```plain
 # Inside AUTHORS.txt
